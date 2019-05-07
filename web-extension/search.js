@@ -28,7 +28,9 @@ function _onSearchInputEvent() {
     if (input.value.length) {
         search(input.value);
     } else {
-        const currentHost = urlDomain(currentPageUrl);
+        let url = urlDomain(currentPageUrl);
+        url = url.replace(/^(?:https?:\/\/)?(?:www\.)?/i, '').split('/')[0];
+        const currentHost = /[a-zA-Z0-9]+\.\w+$/gm.exec(url)[0];
         searchHost(currentHost);
     }
 }

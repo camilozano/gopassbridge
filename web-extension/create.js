@@ -10,6 +10,7 @@ function onDoCreate(event) {
     event.preventDefault();
     let url = urlDomain(currentPageUrl);
     url = url.replace(/^(?:https?:\/\/)?(?:www\.)?/i, '').split('/')[0];
+    url = /[a-zA-Z0-9]+\.\w+$/gm.exec(url)[0];
     let folder = document.getElementById('create_name').value;
     let user = document.getElementById('create_login').value;
     let new_entry_name = folder + '/' + url + '/' + user;
