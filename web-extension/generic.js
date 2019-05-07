@@ -5,7 +5,7 @@ const DEFAULT_SETTINGS = {
     sendnotifications: true,
     submitafterfill: true,
     handleauthrequests: true,
-    defaultfolder: 'Account',
+    defaultfolder: 'websites',
 };
 
 const LAST_DOMAIN_SEARCH_PREFIX = 'LAST_DOMAIN_SEARCH_';

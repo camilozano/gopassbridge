@@ -8,9 +8,15 @@ function initCreate() {
 
 function onDoCreate(event) {
     event.preventDefault();
+    let url = urlDomain(currentPageUrl);
+    url = url.replace(/^(?:https?:\/\/)?(?:www\.)?/i, '').split('/')[0];
+    let folder = document.getElementById('create_name').value;
+    let user = document.getElementById('create_login').value;
+    let new_entry_name = folder + '/' + url + '/' + user;
+    console.log(new_entry_name);
     const message = {
         type: 'create',
-        entry_name: document.getElementById('create_name').value,
+        entry_name: new_entry_name,
         login: document.getElementById('create_login').value,
         password: document.getElementById('create_password').value,
         length: Number(document.getElementById('create_generate_length').value),

@@ -36,8 +36,8 @@
     "description": "caption of search button"
   },
   "createNameLabel": {
-    "message": "Name",
-    "description": "label for name"
+    "message": "Folder",
+    "description": "label for folder"
   },
   "createLoginLabel": {
     "message": "Login / Username",
